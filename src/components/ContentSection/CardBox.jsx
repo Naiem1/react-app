@@ -4,8 +4,6 @@ import propTypes from 'prop-types';
 const CardBox = ({ cardData }) => {
   const { icon, headerText, subHeaderText } = cardData;
 
-  console.log(typeof icon);
-
   return (
     <div className="icon-box">
       <div>
