@@ -9,6 +9,14 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+
+  background-image: url('../../assets/images/bg-image.jpg'),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-blend-mode: overlay;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /* ========================================
@@ -16,18 +24,19 @@ body {
    ======================================== */
 
 .home {
-  background-image: url('../../assets/images/bg-image.jpg');
-  height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+
+@media (prefers-contrast: high) {
+  .home {
+    height: 500%;
+    background-repeat: repeat;
+  }
 }
 
 .home-content {
   width: 80%;
   height: 100vh;
   margin: 0 auto;
-  background: rgba(40, 40, 28, 0.933);
 }
 
 /* ========================================
@@ -52,4 +61,61 @@ body {
   letter-spacing: 3px;
   font-size: 20px;
   margin-top: 25px;
+}
+
+/* ========================================
+    Main Content and Icons
+   ======================================== */
+
+.contentSection {
+  margin-top: 10px;
+}
+
+.icon-box-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #e1dfdd;
+  padding: 0 170px;
+}
+
+.icon-box {
+  max-width: 300px;
+  padding: 50px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 50px;
+  color: green;
+}
+
+.icon-box--header {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+.icon-box--header:hover {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  text-shadow:
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff,
+    0 0 40px #228dff,
+    0 0 70px #228dff,
+    0 0 80px #228dff,
+    0 0 100px #228dff,
+    0 0 150px #228dff;
+}
+
+.icon-box--subheader {
+  font-size: 14px;
+  padding: 0 8px;
+  color: #aba7a9;
 }
